@@ -4,18 +4,17 @@ import fs from "fs";
 import winston from "winston";
 import IConfig from "../../interfaces/IConfig";
 
-export default class MicroService {
+export default class FileServer {
 
-    static instance: MicroService;
-    static readonly SERVICE_TYPE: string = "boilerplate";  //Replace with actual service type
+    static instance: FileServer;
     private logger: winston.Logger;
     private config: IConfig;
 
     constructor() {
-        if (MicroService.instance) {
-            return MicroService.instance;
+        if (FileServer.instance) {
+            return FileServer.instance;
         }
-        MicroService.instance = this;
+        FileServer.instance = this;
 
         this.setup().then()
     }
@@ -24,7 +23,6 @@ export default class MicroService {
         this.createLogger()
         this.loadConfig()
         new ApiServer()
-        await this.connect();
     }
 
     // Загрузка файла конфигурации
@@ -62,46 +60,6 @@ export default class MicroService {
         this.logger.add(new winston.transports.Console({
             format: winston.format.cli(),
         }));
-    }
-
-    /**
-     * Подключение к API Gateway
-     */
-    private async connect() {
-        const gatewayUrl = this.config.gatewayUrl
-        const port = this.config.apiServerPort
-        if (!gatewayUrl) {
-            this.logger.error(`No gatewayUrl is specified in config.json`)
-            process.exit(1)
-        }
-
-        if (!port) {
-            this.logger.error(`No apiServerPort is specified in config.json`)
-            process.exit(1)
-        }
-
-        try {
-            this.logger.info("⌛ Connecting to gateway...")
-
-            const ip = "http://localhost";
-
-            const response = await fetch(gatewayUrl+"/register", {
-                method: "post",
-                headers: {"Content-Type":"application/json"},
-                body: JSON.stringify({type: MicroService.SERVICE_TYPE, ip: ip + ":" + port})
-            });
-
-            const data = await response.json();
-            if (data.success) {
-                this.logger.info("✅ Connected to gateway")
-                return
-            }
-
-            this.logger.error(`Failed to connect to the API Gateway: ${data.code}  ${data.message}`)
-        } catch (e: any) {
-            this.logger.error(`Failed to connect to the API Gateway: ${e}`);
-            process.exit(1);
-        }
     }
 
     public getLogger(){

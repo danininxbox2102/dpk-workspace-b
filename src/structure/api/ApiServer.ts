@@ -3,9 +3,8 @@ import IConfig from "@/interfaces/IConfig";
 import winston from "winston";
 import cookieParser from "cookie-parser";
 
-import {serviceRouter} from "./routers/serviceRouter";
-import MicroService from "@/structure/core/MicroService";
-import {exampleRouter} from "@/structure/api/routers/exampleRouter";
+import MicroService from "@/structure/core/FileServer";
+import {mainRouter} from "@/structure/api/routers/mainRouter";
 
 export default class ApiServer {
 
@@ -27,7 +26,6 @@ export default class ApiServer {
         }
 
         this.server = express();
-        this.server.set('trust proxy', this.config.trustProxy);
         this.setupMiddleware()
         this.listen()
     }
@@ -35,8 +33,8 @@ export default class ApiServer {
     private setupMiddleware(){
         this.server.use(express.json())
         this.server.use(cookieParser())
-        this.server.use(serviceRouter)
-        this.server.use(exampleRouter)
+        this.server.use(express.static("../public"))
+        this.server.use(mainRouter)
     }
 
     private listen(){

@@ -1,2 +1,2 @@
-import MicroService from "./structure/core/MicroService";
-new MicroService();
+import FileServer from "./structure/core/FileServer";
+new FileServer();
