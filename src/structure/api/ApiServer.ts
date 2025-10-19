@@ -2,6 +2,8 @@ import express from 'express'
 import IConfig from "@/interfaces/IConfig";
 import winston from "winston";
 import cookieParser from "cookie-parser";
+import cors from "cors"
+
 
 import MicroService from "@/structure/core/FileServer";
 import {mainRouter} from "@/structure/api/routers/mainRouter";
@@ -31,9 +33,9 @@ export default class ApiServer {
     }
 
     private setupMiddleware(){
+        this.server.use(cors({origin:this.config.corsOrigin}))
         this.server.use(express.json())
         this.server.use(cookieParser())
-        this.server.use(express.static("../public"))
         this.server.use(mainRouter)
     }
 

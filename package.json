@@ -1,24 +1,30 @@
 {
-  "name": "wnx-microservice",
+  "name": "dpk-wksp-back",
   "version": "1.0.0",
-  "repository": "https://github.com/danininxbox2102/WSD-Microservice-boilerplate",
-  "description": "WNX Microservice boilerplate",
+  "repository": "https://github.com/danininxbox2102/dpk-workspace-b",
+  "description": "DPL Workspace backend server",
   "devDependencies": {
     "@types/cookie-parser": "^1.4.9",
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "^24.6.2",
     "typescript": "^5.9.3"
   },
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "dev": "npx ts-node ./src/index.ts"
   },
   "author": "Daniel_Cap",
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "fs-extra": "^11.3.2",
     "winston": "^3.18.3"
   }
 }
