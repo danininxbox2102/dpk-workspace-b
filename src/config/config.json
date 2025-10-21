@@ -1,5 +1,6 @@
 {
   "apiServerPort": 3000,
   "docDir": "../documents",
+  "dataDir": "../data",
   "corsOrigin":"http://localhost:5173"
 }
