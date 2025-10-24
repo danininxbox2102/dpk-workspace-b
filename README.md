@@ -1,15 +1,17 @@
 # Russian - Original
 ## DPKWorkSpaceBackend 
 **Является файловым сервером нового поколения**
+
 **Данный проект предназначен исключительно для Донецкого политехнического колледжа**
+
 *Любая попытка компроментации проекта будет обнаружена*
 
 > На данный момент, этот проект находится в разработке, вскоре, возможно, появится что-то новое. 
 >>Если появились вопросы по использованию, то смело обращайтесь: https://t.me/tercompy
 
 ### Разработчики
-![TerComPy]("https://avatars.githubusercontent.com/u/149235301?v=4" "TerComPy (SIP-24-2)")
-![danininxbox2102]("https://avatars.githubusercontent.com/u/170051593?v=4" "danininxbox2102 (SIP-24-1)")
+![TerComPy](https://avatars.githubusercontent.com/u/149235301?v=4 "TerComPy (SIP-24-2)")
+![danininxbox2102](https://avatars.githubusercontent.com/u/170051593?v=4 "danininxbox2102 (SIP-24-1)")
 
 ### Задачи, на реализацию
 - [x] Оформить файл `Readme.MD`
