@@ -6,6 +6,13 @@ import path from "node:path";
 
 export default class DocumentHandler implements IApiHandler {
 
+
+    /**
+     * 
+     * @param req name* - обязательный параметр, в котором задается имя документа, который необходимо получить
+     * @param res обработчик данных, который вернет либо документ, либо код ошибки в зависимости от полученного документа
+     * @returns Либо документ, либо ошибку
+     */
     async handle(req: Request, res: Response) {
 
         const docName = req.params.name;

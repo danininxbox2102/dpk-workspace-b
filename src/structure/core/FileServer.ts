@@ -10,6 +10,14 @@ export default class FileServer {
     private logger: winston.Logger;
     private config: IConfig;
 
+
+    /**
+     * При использовании данного конструктора происходит инициализация файлового сервера
+     * При попытке повторно создать Instance вернется уже имеющийся экземпляр
+     * @returns FileServer instance
+     * 
+     */
+
     constructor() {
         if (FileServer.instance) {
             return FileServer.instance;
