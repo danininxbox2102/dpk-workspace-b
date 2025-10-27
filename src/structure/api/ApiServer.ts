@@ -17,6 +17,12 @@ export default class ApiServer {
     private readonly logger: winston.Logger
     private readonly config: IConfig
 
+
+    /**
+     * Создаем экземпляр API для обращения к файловому серверу
+     * 
+     */
+
     constructor() {
         this.logger = MicroService.instance.getLogger()
         this.config = MicroService.instance.getConfig()
@@ -35,7 +41,7 @@ export default class ApiServer {
 
     private setupMiddleware(){
         this.server.use(cors({origin:this.config.corsOrigin}))
-
+        
         const limiter = rateLimit({
             windowMs: 60 * 1000, // 15 minutes
             limit: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes).
