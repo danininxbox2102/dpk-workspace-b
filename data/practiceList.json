@@ -1,51 +1,76 @@
 [
   {
-    "name": "Лабораторная работа «Работа с Visual Studio Code»",
+    "name": "Работа с Visual Studio Code",
     "file": "http://localhost:3000/document/practice2.docx",
-    "cover":"/img/vscode.webp",
-    "rept": "http://localhost:3000/document/practice2.docx"
+    "cover":"/img/vscode.jpg",
+    "report": "http://localhost:3000/document/practice2.docx",
+    "status": "done",
+    "statusInfo": {
+      "type": "done",
+      "grade": 4,
+      "withComment": true
+    }
   },
   {
-    "name": "Лабораторная работа «Разработка и компиляция  стилей»",
+    "name": "Разработка и компиляция css стилей",
     "file": "http://localhost:3000/document/practice3.docx",
     "cover": "/img/css.jpg",
-    "offsetX": 0
+    "offsetX": 0,
+    "status": "done",
+    "statusInfo": {
+      "type": "done",
+      "grade": 5,
+      "withComment": false
+    }
   },
   {
-    "name": "Лабораторная работа «Описание и создание атрибутов»",
+    "name": "Работа с макетом",
     "file": "",
-    "cover": "https://i.pinimg.com/736x/a1/16/a0/a116a016aa80a0038935c9376bc9ee9a.jpg"
+    "cover": "https://i.pinimg.com/736x/a1/16/a0/a116a016aa80a0038935c9376bc9ee9a.jpg",
+    "status": "declined",
+    "statusInfo": {
+      "type": "declined",
+      "reason": "В целом неплохо, но хуйня. прям поебень такая, уверенная..."
+    }
   },
   {
-    "name": "Лабораторная работа «Описание и создание элементов»",
+    "name": "Основы Javascript",
+    "file": "",
+    "cover": "/img/code.jpg",
+    "status": "expires",
+    "statusInfo": {
+      "type": "expires",
+      "expiresAt": "5.11.2025"
+    }
+  },
+  {
+    "name": "Создание таблиц",
+    "file": "",
+    "status": "pending"
+  },
+  {
+    "name": "Настройка стилей в таблицах",
+    "file": "",
+    "status": "sent"
+  },
+  {
+    "name": "Создание списков и их дизайн",
     "file": ""
   },
   {
-    "name": "Лабораторная работа « Создание таблиц »",
+    "name": "Создание списков и их дизайн",
     "file": ""
   },
   {
-    "name": "Лабораторная работа « Настройка стилей в таблицах »",
+    "name": "Работа с классами и их видами",
     "file": ""
   },
   {
-    "name": "Лабораторная работа « Создание списков и их дизайн»",
+    "name": "Работа с классами и их видами",
     "file": ""
   },
   {
-    "name": "Лабораторная работа «Создание списков и их дизайн»",
-    "file": ""
-  },
-  {
-    "name": "Лабораторная работа «Работа с классами и их видами»",
-    "file": ""
-  },
-  {
-    "name": "Лабораторная работа «Работа с классами и их видами»",
-    "file": ""
-  },
-  {
-    "name": "Лабораторная работа «Создание форм»",
+    "name": "Создание форм",
     "file": ""
   },
   {
@@ -77,19 +102,19 @@
     "file": ""
   },
   {
-    "name": "Лабораторная работа «Создание веб страницы»",
+    "name": "Создание веб страницы",
     "file": ""
   },
   {
-    "name": "Лабораторная работа «Разработка интерфейса»",
+    "name": "Разработка интерфейса",
     "file": ""
   },
   {
-    "name": "Лабораторная работа «Разработка интерфейса»",
+    "name": "Разработка интерфейса",
     "file": ""
   },
   {
-    "name": "Лабораторная работа «Разработка интерфейса»",
+    "name": "Разработка интерфейса",
     "file": ""
   }
 ]
