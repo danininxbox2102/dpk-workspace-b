@@ -7,11 +7,16 @@ import addPractice from "./handlers/addPractice";
 const router:Router = express.Router();
 export const mainRouter = router;
 
-// Example route with handler
+// Main router
+
+//
 router.get('/', new ExampleHandler().handle)
 
+// Get document by its name
 router.get('/document/:name', new DocumentHandler().handle)
 
+// Get practice list
 router.get('/practices', new PracticeListHandler().handle)
 
+// Post new practice
 router.post('/practice/new', new addPractice().handle)
